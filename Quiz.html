@@ -2,16 +2,68 @@
 <html lang="en">
     <head>
         <title>Responsive Quiz</title>
-        <link rel="stylesheet" href="styles.css"/>
-        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
         <meta name="viewport" content="with=device-widht, initial-sacale=1.0"/>
         <meta name="description" content="Accessibility Quiz"/>
     </head>
     <body>
-        <header></header>
-        <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" id="logo"/>
-        <h1>HTML/CSS Quiz</h1>
-        <nav></nav>
-        <main></main>
+        <header>
+          <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" id="logo"/>
+          <h1>HTML/CSS Quiz</h1>
+          <nav>
+            <ul>
+                <li><a href=#student-info>INFO</a></li>
+                <li><a>HTML</a></li>
+                <li><a>CSS</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+            <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+                <section role="region" labelledby="student-info">
+                    <h2 id="student-info">Student Info</h2>
+                    <div class="info">
+                        <label for="student-name">Name</label>
+                        <input id="student-name" name="name" type="text"></input>
+                    </div>
+                    <div class="info">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email"></input>
+                    </div>
+                    <div class="info">
+                        <label for="date-birth">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                        <input id="date-birth" name="date-birth" type="date"></input>
+                    </div>
+                </section>
+                <section role="region" labelledby="html-questions">
+                    <h2 id="html-questions">HTML Questions</h2>
+                    <div class="question-block">
+                        <p>1</p>
+                        <fieldset class="question" name="html-question-one">
+                            <legend>true/false</legend>
+                            <ul>
+                                <li><label><input type="radio"></input></label></li>
+                                <li><label><input type="radio"></input></label></li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <div class="question-block">
+                        <p>2</p>
+                        <fieldset class="question" name="html-question-two">
+                            <legend>true/false</legend>
+                            <ul class="answers-list">
+                                <li><label><input type="radio"></input></label></li>
+                                <li><label><input type="radio"></input></label></li>   
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+                <section role="region" labelledby="css-questions">
+                    <h2 id="css-questions">CSS Questions</h2>
+                </section>
+            </form>
+        </main>
     </body>
 </html>
+
